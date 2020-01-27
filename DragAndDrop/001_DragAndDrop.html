@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<title>Drag $ Drop</title>
+ 	<style>
+ 		#source {
+ 			background-color: yellow;
+ 			width: 100px;
+ 			height: 100px;
+ 			cursor: move;
+ 			color: black;
+ 		}
+
+ 		#target {
+ 			background-color: blue;
+ 			width: 150px;
+ 			height: 150px;
+ 			padding: 5px;
+ 			margin-bottom: 5px;
+ 			color: white;
+ 		}
+ 	</style>
+
+ 	<script>
+ 		// dragstart - вызывается в самом начале переноса перетаскиваемго элемента.
+ 		// dragend - вызывается в конце события перетаскивания - как успешного,так и отменненого.
+ 		// dragenter - происходит в момент когда перетаскиваемый объект попадает в область целевого элемента
+ 		// dragleave - происходит когда перетаскиваемый элемент покидает область целевого элемента.
+ 		// dragover - происходит когда перетаскиваемый элемент, находится над цулевым элементом.
+ 		// drop - вызывается, когда событие перетаскивания завершается отпусканием элемента над целевым элементом
+
+ 		window.onload = function () {
+ 			var source = document.getElementById("source");
+
+ 			// начало операции drag
+ 			source.addEventListener('dragstart', function (evt) {
+ 				this.style.border = "3px dotted #000"; // меняет стиль в начале операции drag & drop
+
+ 				// Свойство effectAllowed управляет визуальным эффектом (чаще всего это вид указателя мыши), который браузер создает в ответ
+ 				// на тип происходящего события перетаскивания (перемещения, копирования и т. п.).
+ 				// http://msdn.microsoft.com/en-us/library/ie/ms533743%28v=vs.85%29.aspx
+ 				evt.dataTransfer.effectAllowed = "move";
+ 				
+
+ 			})
+ 		}
+ 	</script>
+</body>
+</html>
