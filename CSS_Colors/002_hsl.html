@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>hls</title>
+  <style>
+    div {
+      padding: 10px;
+      margin: 10px;
+      font-weight: bold;
+      color: white;
+    }
+
+    div {
+      width: 200px;
+      height: 120px;
+      margin: 10px;
+      float: left;
+      padding: 10px;
+      font-size: 1.5em;
+      background-color: black;
+      color: orange;
+      z-index: 100;
+    }
+
+    #id1 {
+      /* rgba(red, green, blue, alpha)
+        значение каналов red, green, blue - от 0 до 255
+        значение alpha-каналов 0 - полность прозрачный, 1 - полностью не позрачный 
+        При использовании rgba прозрачность задаётся только элементу,
+        дочерние элементы остаются без изменений.
+      */
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    #id2 {
+      /* opacity - устанавливает прозрачность для элемента и всех дочерних элементов */
+      opacity: 0.1;
+    }
+  </style>
+</head>
+<body>
+  <div id="id1">Прозрачнасть задана с помощью RGBA.</div>
+  <div id="id2">Прозрачнасть задана с помощью opacity.</div>
+</body>
+</html>
