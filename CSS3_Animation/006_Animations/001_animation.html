@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>анимация</title>
+	<title>Анимация</title>
 	<style>
-		/*opredelenie kadrov*/
+		/* определение кадров анимации */
 		@keyframes moveRight {
+			/* наченаем анимацию с margin-left 3px */
 			from {
 				margin-left: 3px;
 			}
 
+			/* завершаем анимацию с margin-left 500px*/
 			to {
 				margin-left: 500px;
 			}
@@ -23,6 +25,7 @@
 				margin-left: 500px;
 			}
 		}
+
 		@-webkit-keyframes moveRight {
 			from {
 				margin-left: 3px;
@@ -43,10 +46,12 @@
 			-moz-animation: moveRight 4s 3;
 			-webkit-animation: moveRight 4s 3;
 			animation: moveRight 4s 3;
+			/* запустить анимацию с именем moveleft, продолжительностью анимации 4s, повторить анимацию 3 раза*/
 		}
 	</style>
+
 </head>
 <body>
-<dir id="id1"></dir>
+	<div id="id1"></div>
 </body>
 </html>

@@ -2,33 +2,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  	<title>appearance</title>
-  	<style>
-  		input[type="checkbox"] {
-  			background: url(switch.png); /* переключатель выключен */
-  			height: 26px;
-  			width: 32px;
-  			cursor: pointer;
-  			/* отключаем стандартное отображения элемента input checkbox*/
-  			-webkit-appearance: none;
-  			-moz-appearance: none;
-  			appearance: none;
+  <title>appearance</title>
+  <style>
+  	input[type="checkbox"] {
+  		background: url(switch.png); /* переключатель выключен */
+  		height: 26px;
+  		width: 32px;
+  		cursor: pointer;
+  		/* отключаем стандартное отображения элемента input checkbox*/
+  		-webkit-appearance: none;
+  		-moz-appearance: none;
+  		appearance: none;
+  	}
+
+  		input[type="checkbox"]:checked {
+  			background-position: 0 -26px; /* переключатель включен */
   		}
 
-  			input [type="checkbox"]:checked {
-  				background-position: 0 -26px; /* переключатель включен */
-  			}
 
+    /* указываем что div должен отображатся как кнопка */
+    div {
+    	-moz-appearance: button;
+    	-webkit-appearance: button;
+  		appearance: button;
 
-   		/* указываем что div должен отображатся как кнопка */
-    	div {
-    		-moz-appearance: button;
-    		-webkit-appearance: button;
-  			appearance: button;
-
-  			width: 75px;
-  			padding: 10px;
-    	}
+  		width: 75px;
+  		padding: 10px;
+    }
   </style>
 </head>
 <body>	
@@ -46,7 +46,5 @@
   <div>This is DIV</div>
 
   <a href="http://htmlbook.ru/blog/stilnye-chekboksy-ne-dlya-vsekh">HTMLBook</a>
- </body>
-</html>
 </body>
 </html>
